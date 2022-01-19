@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Blank Skill
-  range: BOTH
+  range: 
   type: PHYSICAL
   damage: 35
   times: 0

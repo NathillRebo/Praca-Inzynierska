@@ -5,7 +5,7 @@ using UnityEngine;
 public class AbilityScript : MonoBehaviour
 {
     public string skillName; // Nazwa zdolnoœci
-    public string range; // Z jakiej odleg³oœci mo¿na u¿yæ: "CLOSE" dla zasiêgu bliskiego, "FAR" dla zasiêgu odleg³ego oraz "BOTH" dla dowolnego
+    public string skillDesc; //Opis zdolnoœci, ¿eby gracz wiedzia³, co dana zdolnoœæ robi
     public string type; // Przyjmuje wartoœci "PHYSICAL", "LIGHT" lub "DARK" i okreœla, któr¹ odpornoœci¹ zmniejszane s¹ obra¿enia otrzymane
     public int damage; //Iloœæ obra¿eñ zadanych przez zdolnoœæ
     public int times; // Ile razy zdolnoœæ zadaje obra¿enia. Zwiêksza to obra¿enia, ale te¿ skutecznoœæ odpornoœci przeciwko temu atakowi.

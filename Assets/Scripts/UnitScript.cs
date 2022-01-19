@@ -16,22 +16,22 @@ public class UnitScript : MonoBehaviour
 
 	public AbilityScript[] ability;
 
-	//stany
-	
-	float vulnerabilityMult = 1.4f;
-	float strengthMult = 1.4f;
-	float impairMult = 0.7f;
-	float resistanceMult = 0.7f;
-	int hasteAmt = 2;
-	int slowAmt = -2;
-	int bolsterAmt = 4;
-	int frailtyAmt = 4;
-	int powerAmt = 4;
-	int weakAmt = 4;
+    //stany
 
-	int interceptDamage = 50;
-	int restHeal = 2;
-	int restMana = 5;
+    readonly float vulnerabilityMult = 1.4f;
+    readonly float strengthMult = 1.4f;
+    readonly float impairMult = 0.7f;
+    readonly float resistanceMult = 0.7f;
+    readonly int hasteAmt = 2;
+    readonly int slowAmt = -2;
+    readonly int bolsterAmt = 4;
+    readonly int frailtyAmt = 4;
+    readonly int powerAmt = 4;
+    readonly int weakAmt = 4;
+
+    readonly public int interceptDamage = 50;
+    readonly public int restHeal = 2;
+    readonly public int restMana = 5;
 
 	public bool switches = false; //Unika wszystkich ataków, oprócz przechwycenia
 	public bool intercepts = false; //Próbuje przechwyciæ wroga zmieniaj¹cego siê
@@ -45,11 +45,21 @@ public class UnitScript : MonoBehaviour
 	public bool haste = false; //Akcja ma szybkoœæ zwiêkszon¹ o 2
 	public bool slow = false; //Akcja ma szybkoœæ zmniejszon¹ o 2
 	public bool bolster = false; //Zmniejsza obra¿enia otrzymane o 4
-	public bool frailty = false; //Zwiêksza obra¿enia otrzymne o 4
-	public bool power = false;
-	public bool weak = false;
+	public bool frailty = false; //Zwiêksza obra¿enia otrzymane o 4
+	public bool power = false; //Zwiêksza obra¿enia zadane o 4
+	public bool weak = false; //Zmniejsza obra¿enia zadane o 4
 
-	public void TakeDamage(int amnt, int mult, string dmgType, bool impairSrc, bool strengthSrc, bool weakSrc, bool powerSrc)
+    public int GetHasteAmt()
+    {
+        return hasteAmt;
+    }
+
+    public int GetSlowAmt()
+    {
+        return slowAmt;
+    }
+
+    public void TakeDamage(int amnt, int mult, string dmgType, bool impairSrc, bool strengthSrc, bool weakSrc, bool powerSrc)
     {
 		int redu = 0;
 		float amt = (float)amnt;

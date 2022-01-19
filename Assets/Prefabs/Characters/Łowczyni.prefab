@@ -53,11 +53,24 @@ MonoBehaviour:
   lgtArmor: 1
   drkArmor: 5
   ability:
-  - {fileID: 7216477210046899933, guid: cf7099e86f41aef4da24b09bdb6a3eac, type: 3}
-  - {fileID: 7216477210046899933, guid: cf7099e86f41aef4da24b09bdb6a3eac, type: 3}
-  - {fileID: 7216477210046899933, guid: cf7099e86f41aef4da24b09bdb6a3eac, type: 3}
-  - {fileID: 7216477210046899933, guid: cf7099e86f41aef4da24b09bdb6a3eac, type: 3}
+  - {fileID: -6423737035638975510, guid: 96f3428ef8096dc44b0d6e4578187fc1, type: 3}
+  - {fileID: -219867538191218485, guid: 062e344bf816885488b067677d95f7a8, type: 3}
+  - {fileID: -8440253017512574927, guid: 9ce3ada4a1f5d8447818f85c49814984, type: 3}
+  - {fileID: -3774629688257876577, guid: e463c26514981964491fe59a12a546cd, type: 3}
   switches: 0
+  intercepts: 0
+  rests: 0
+  interrupted: 0
+  vulnerability: 0
+  strength: 0
+  impair: 0
+  resistance: 0
+  haste: 0
+  slow: 0
+  bolster: 0
+  frailty: 0
+  power: 0
+  weak: 0
 --- !u!1 &1920791799200697700
 GameObject:
   m_ObjectHideFlags: 0
