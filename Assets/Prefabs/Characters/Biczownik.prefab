@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Flagelant
+  unitPortrait: {fileID: 21300000, guid: 3bc9b5ec3badc4f46ae1d6adddd29b8b, type: 3}
   maxHP: 99
   curHP: 99
   maxMana: 100

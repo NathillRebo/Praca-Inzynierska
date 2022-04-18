@@ -46,10 +46,16 @@ MonoBehaviour:
   skillName: "O\u015Blepienie"
   skillDesc: "Typ: \u015Awiat\u0142o\u015B\u0107\\nKoszt: 30\\nSzybko\u015B\u0107:
     6\\nPrzerywa wolniejszy atak."
+  skillIcon: {fileID: 21300000, guid: 006e1da87f48e424094648055795b1ab, type: 3}
   type: LIGHT
   damage: 0
   times: 0
   cost: 30
   speed: 6
-  banes: 
-  boons: INTERRUPT
+  banes: INTERRUPT
+  boons: 
+  AIValue_Skill: 11.83
+  AIValue_Kill: 75.83
+  AIValue_Rest: -6.86
+  AIValue_Switch: -4.17
+  AIValue_Intercept: -4.17

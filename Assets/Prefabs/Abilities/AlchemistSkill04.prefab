@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: "Dusz\u0105ca Chmura"
   skillDesc: "Typ: Ciemno\u015B\u0107\\nKoszt: 55\\nSzybko\u015B\u0107: 4\\nPrzerywa
     wolniejsze ataki. Nak\u0142ada OS\u0141ABIENIE i S\u0141ABO\u015A\u0106"
+  skillIcon: {fileID: 21300000, guid: 06a8f1ee13d7fef4b9fec6b8b7f99d90, type: 3}
   type: DARK
   damage: 0
   times: 0
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 4
   banes: INTERRUPT|IMPAIR|WEAK
   boons: 
+  AIValue_Skill: 34.36
+  AIValue_Kill: 62.36
+  AIValue_Rest: 29.67
+  AIValue_Switch: -7.64
+  AIValue_Intercept: 32.36

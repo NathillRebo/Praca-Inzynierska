@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\BattleHUDScript.cs" />
     <Compile Include="Assets\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Scripts\AbilityScript.cs" />
+    <Compile Include="Assets\Scripts\AIScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

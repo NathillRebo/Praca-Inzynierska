@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: "Zapa\u0142"
   skillDesc: "Typ: \u015Awiat\u0142o\u015B\u0107\\nKoszt: 10\\nSzybko\u015B\u0107:
     5\\nZyskaj SZYBKO\u015A\u0106"
+  skillIcon: {fileID: 21300000, guid: 105914583be0c73478a3ff98e4191012, type: 3}
   type: LIGHT
   damage: 0
   times: 0
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 5
   banes: 
   boons: HASTE
+  AIValue_Skill: 13.61
+  AIValue_Kill: 73.61
+  AIValue_Rest: 15.92
+  AIValue_Switch: 18.61
+  AIValue_Intercept: 18.61

@@ -46,10 +46,16 @@ MonoBehaviour:
   skillName: Szybkie Ataki
   skillDesc: "Typ: Fizyczny\\nObra\u017Cenia: 10x4\\nKoszt: 30\\nSzybko\u015B\u0107:
     8"
+  skillIcon: {fileID: 21300000, guid: c67c20b7d8634534fb502018bd3e74d3, type: 3}
   type: PHYSICAL
   damage: 10
   times: 4
   cost: 30
-  speed: 0
-  banes: 8
+  speed: 8
+  banes: 
   boons: 
+  AIValue_Skill: 31.83
+  AIValue_Kill: 85.83
+  AIValue_Rest: 33.14
+  AIValue_Switch: -4.17
+  AIValue_Intercept: 35.83

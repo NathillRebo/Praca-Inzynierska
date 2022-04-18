@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "Szybki Strza\u0142"
   skillDesc: "Typ: Fizyczny\\nObra\u017Cenia: 29\\nSzybko\u015B\u0107: 7"
+  skillIcon: {fileID: 21300000, guid: 1ae0130b37c63b346b3d3373af46b676, type: 3}
   type: PHYSICAL
   damage: 29
   times: 1
@@ -52,3 +53,8 @@ MonoBehaviour:
   speed: 7
   banes: 
   boons: 
+  AIValue_Skill: 20.48
+  AIValue_Kill: 80.83
+  AIValue_Rest: 22.14
+  AIValue_Switch: 4.17
+  AIValue_Intercept: 24.83

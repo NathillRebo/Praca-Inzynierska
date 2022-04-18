@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: Ukrycie
   skillDesc: "Typ: Ciemno\u015B\u0107\\nKoszt: 30\\nSzybko\u015B\u0107: 3\\nZyskaj
     SI\u0141A i WYTRZYMA\u0141O\u015A\u0106"
+  skillIcon: {fileID: 21300000, guid: 91729c3f7792feb4e9963691aa121778, type: 3}
   type: DARK
   damage: 0
   times: 0
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 3
   banes: 
   boons: STRENGTH|BOLSTER
+  AIValue_Skill: 21.83
+  AIValue_Kill: 60.83
+  AIValue_Rest: 33.14
+  AIValue_Switch: 35.83
+  AIValue_Intercept: 35.83

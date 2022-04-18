@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: Ognista Mikstura
   skillDesc: "Typ: Ciemno\u015B\u0107\\nObra\u017Cenia: 12x4\\nKoszt: 40\\nSzybko\u015B\u0107:
     8"
+  skillIcon: {fileID: 21300000, guid: a15c73d7b7982a443b4ae1a6990a66b1, type: 3}
   type: DARK
   damage: 12
   times: 4
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 8
   banes: 
   boons: 
+  AIValue_Skill: 37.64
+  AIValue_Kill: 85
+  AIValue_Rest: 39.75
+  AIValue_Switch: -5.56
+  AIValue_Intercept: 42.44

@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: "Rzut G\u0142azem"
   skillDesc: "Typ: Fizyczny\\nObra\u017Cenia: 50\\nKoszt: 50\\nSzybko\u015B\u0107:
     4"
+  skillIcon: {fileID: 21300000, guid: d0a6fb35b9842ee4e90531f9bd396b23, type: 3}
   type: PHYSICAL
   damage: 50
   times: 1
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 4
   banes: 
   boons: 
+  AIValue_Skill: 28.06
+  AIValue_Kill: 63.06
+  AIValue_Rest: 40.36
+  AIValue_Switch: -6.94
+  AIValue_Intercept: 43.06

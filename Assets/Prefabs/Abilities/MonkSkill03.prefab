@@ -46,10 +46,16 @@ MonoBehaviour:
   skillName: "Lotny \u017Buraw"
   skillDesc: "Typ: Fizyczny\\nObra\u017Cenia: 13\\nKoszt: 40\\nSzybko\u015B\u0107:
     8\\nNak\u0142ada WRA\u017BLIWO\u015A\u0106."
+  skillIcon: {fileID: 21300000, guid: 451edb55cc5f0a84e8c12575d24f7732, type: 3}
   type: PHYSICAL
   damage: 13
   times: 1
   cost: 40
   speed: 8
-  banes: 
-  boons: VULNERABILITY
+  banes: VULNERABILITY
+  boons: 
+  AIValue_Skill: 24.14
+  AIValue_Kill: 84.44
+  AIValue_Rest: 24.75
+  AIValue_Switch: -5.56
+  AIValue_Intercept: 27.44

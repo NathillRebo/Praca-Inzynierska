@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: "Wstrz\u0105sy"
   skillDesc: "Typ: Fizyczny\\nObra\u017Cenia: 8x2\\nKoszt: 30\\nSzybko\u015B\u0107:
     5\\nNak\u0142ada OS\u0141ABIENIE."
+  skillIcon: {fileID: 21300000, guid: e5b07494cabd15b44bbfa3c2d0956f02, type: 3}
   type: PHYSICAL
   damage: 8
   times: 2
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 5
   banes: WEAK
   boons: 
+  AIValue_Skill: 22.83
+  AIValue_Kill: 70.83
+  AIValue_Rest: 29.14
+  AIValue_Switch: -4.17
+  AIValue_Intercept: 31.83

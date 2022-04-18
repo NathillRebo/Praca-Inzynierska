@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: "Os\u0105d"
   skillDesc: "Typ: \u015Awiat\u0142o\u015B\u0107\\nObra\u017Cenia: 27\\nKoszt: 50\\nSzybko\u015B\u0107:
     5\\nNak\u0142ada SPOWOLNIENIE"
+  skillIcon: {fileID: 21300000, guid: 49b676d5c72c4df4a86d0e7ab02f2069, type: 3}
   type: LIGHT
   damage: 27
   times: 1
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 5
   banes: SLOW
   boons: 
+  AIValue_Skill: 28.31
+  AIValue_Kill: 68.06
+  AIValue_Rest: 37.36
+  AIValue_Switch: -6.94
+  AIValue_Intercept: 40.05

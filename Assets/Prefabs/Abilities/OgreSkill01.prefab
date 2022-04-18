@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "Napinanie Mi\u0119\u015Bci"
   skillDesc: "Typ: Fizyczny\\nKoszt: 5\\nSzybko\u015B\u0107: 3\\nZyskaj SI\u0141A."
+  skillIcon: {fileID: 21300000, guid: 571f0e2478cfdfa4d82a2c83a0697349, type: 3}
   type: PHYSICAL
   damage: 0
   times: 0
@@ -52,3 +53,8 @@ MonoBehaviour:
   speed: 3
   banes: 
   boons: STRENGTH
+  AIValue_Skill: 12.31
+  AIValue_Kill: 64.31
+  AIValue_Rest: 16.61
+  AIValue_Switch: 19.31
+  AIValue_Intercept: 19.31

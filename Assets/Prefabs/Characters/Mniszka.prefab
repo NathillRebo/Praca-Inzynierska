@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Mniszka
+  unitPortrait: {fileID: 21300000, guid: ae11fdfec53e7e24daebc946a2f5cb18, type: 3}
   maxHP: 100
   curHP: 100
   maxMana: 100

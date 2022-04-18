@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: Medytacja
   skillDesc: "Typ: \u015Awiat\u0142o\u015B\u0107\\nKoszt: 0\\nSzybko\u015B\u0107:
     0\\nZyskaj MOC."
+  skillIcon: {fileID: 21300000, guid: bd014f2e28a3314498a4faaafe07706c, type: 3}
   type: LIGHT
   damage: 0
   times: 0
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 0
   banes: 
   boons: POWER
+  AIValue_Skill: 10
+  AIValue_Kill: 50
+  AIValue_Rest: 17.31
+  AIValue_Switch: 20
+  AIValue_Intercept: 20

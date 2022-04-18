@@ -46,10 +46,16 @@ MonoBehaviour:
   skillName: "Mocna Pi\u0119\u015B\u0107"
   skillDesc: "Typ: Fizyczny\\nObra\u017Cenia: 25\\nKoszt: 20\\nSzybko\u015B\u0107:
     6"
+  skillIcon: {fileID: 21300000, guid: 3788e567a99ebdc4cafc36dc9d551998, type: 3}
   type: PHYSICAL
   damage: 25
-  times: 0
+  times: 1
   cost: 20
   speed: 6
   banes: 
   boons: 
+  AIValue_Skill: 17.22
+  AIValue_Kill: 77.22
+  AIValue_Rest: 19.53
+  AIValue_Switch: -2.78
+  AIValue_Intercept: 22.22

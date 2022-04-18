@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Alchemik
+  unitPortrait: {fileID: 21300000, guid: 6f01d04161244d74c90abb694b47fdcc, type: 3}
   maxHP: 93
   curHP: 93
   maxMana: 100

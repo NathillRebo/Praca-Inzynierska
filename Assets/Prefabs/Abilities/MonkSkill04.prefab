@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: Wybuch Ki
   skillDesc: "Typ: \u015Awiat\u0142o\u015B\u0107\\nObra\u017Cenia: 53\\nKoszt: 60\\nSzybko\u015B\u0107:
     5"
+  skillIcon: {fileID: 21300000, guid: 7dbb73f50dc65c64e8885f1f47c192fe, type: 3}
   type: LIGHT
   damage: 53
   times: 1
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 5
   banes: 
   boons: 
+  AIValue_Skill: 31.42
+  AIValue_Kill: 66.67
+  AIValue_Rest: 41.97
+  AIValue_Switch: -8.33
+  AIValue_Intercept: 44.66

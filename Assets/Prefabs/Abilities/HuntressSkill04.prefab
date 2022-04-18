@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: "Strza\u0142 z Przy\u0142o\u017Cenia"
   skillDesc: "Typ: Fizyczny\\nObra\u017Cenia: 8x7\\nKoszt: 60\\nSzybko\u015B\u0107:
     5\\nNak\u0142ada KRUCHO\u015A\u0106"
+  skillIcon: {fileID: 21300000, guid: 8c348c73baa618f48a4c34f1d9589c31, type: 3}
   type: PHYSICAL
   damage: 8
   times: 7
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 5
   banes: FRAILTY
   boons: 
+  AIValue_Skill: 48.67
+  AIValue_Kill: 66.67
+  AIValue_Rest: 64.97
+  AIValue_Switch: -8.33
+  AIValue_Intercept: 67.67

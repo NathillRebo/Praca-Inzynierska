@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: "\u0141owczyni"
+  unitPortrait: {fileID: 21300000, guid: 8207a63b4e728bd458847341ccb4a6a1, type: 3}
   maxHP: 106
   curHP: 106
   maxMana: 100

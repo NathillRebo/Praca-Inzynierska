@@ -46,6 +46,7 @@ MonoBehaviour:
   skillName: Bola
   skillDesc: "Typ: Fizyczny\\nObra\u017Cenia: 6x2\\nKoszt: 40\\nSzybko\u015B\u0107:
     7\\nPrzerywa wolniejsze ataki."
+  skillIcon: {fileID: 21300000, guid: 1f6e9564f40288e4692adfee2c94e36e, type: 3}
   type: PHYSICAL
   damage: 6
   times: 2
@@ -53,3 +54,8 @@ MonoBehaviour:
   speed: 6
   banes: INTERRUPT
   boons: 
+  AIValue_Skill: 19.35
+  AIValue_Kill: 73.75
+  AIValue_Rest: 3.06
+  AIValue_Switch: -6.25
+  AIValue_Intercept: 5.75

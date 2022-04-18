@@ -6,6 +6,7 @@ using UnityEngine;
 public class UnitScript : MonoBehaviour
 {
     public string unitName ;
+    public Sprite unitPortrait;
 	public int maxHP ;
 	public int curHP ;
 	public int maxMana ;
@@ -62,7 +63,7 @@ public class UnitScript : MonoBehaviour
     public void TakeDamage(int amnt, int mult, string dmgType, bool impairSrc, bool strengthSrc, bool weakSrc, bool powerSrc)
     {
 		int redu = 0;
-		float amt = (float)amnt;
+		float amt = amnt;
 		if (dmgType == "PHYSICAL")
         {
 			redu = phsArmor;
@@ -112,8 +113,11 @@ public class UnitScript : MonoBehaviour
 			bolster = false;
         }
 		amt = Math.Max(0, amt - redu);
-		amt = Convert.ToInt32(Math.Round(amt, MidpointRounding.AwayFromZero));
-		int dmg = Convert.ToInt32(Math.Min(0, (amt - redu) * mult));
+        //Debug.Log("amt: " + amt);
+        amt = Convert.ToInt32(Math.Round(amt, MidpointRounding.AwayFromZero));
+        //Debug.Log("amt: " + amt);
+        int dmg = Convert.ToInt32(Math.Max(0, (amt - redu) * mult));
+        //Debug.Log("dmg: " + dmg);
 		curHP -= dmg;
     }
 	public bool CheckDead()
