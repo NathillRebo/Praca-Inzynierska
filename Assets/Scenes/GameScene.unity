@@ -2915,8 +2915,11 @@ MonoBehaviour:
   AI_ManaMultiplier: 7.2
   AI_ChooseMax: 0
   AI_ChooseMin: 0
-  p_c: 0.8
-  p_m: 0.35
+  p_c: 70
+  p_m: 20
+  AI_pop: 12
+  AI_n: 3
+  AI_gen_max: 1300
 --- !u!4 &916704909
 Transform:
   m_ObjectHideFlags: 0

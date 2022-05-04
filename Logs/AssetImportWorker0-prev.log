@@ -15,11 +15,11 @@ C:/Users/Michał/Documents/GitHub/Praca Inżynierska/Praca Inżynierska
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61474
+59266
 Successfully changed project path to: C:/Users/Michał/Documents/GitHub/Praca Inżynierska/Praca Inżynierska
 C:/Users/Michał/Documents/GitHub/Praca Inżynierska/Praca Inżynierska
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 66.35 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 72.41 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.12f1 (b3b2c6512326)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
@@ -37,37 +37,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56656
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56420
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002240 seconds.
+Registered in 0.002797 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 65.38 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 66.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.522 seconds
+- Completed reload, in  1.664 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005380 seconds.
+Registered in 0.007076 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 64.96 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 65.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.863 seconds
+- Completed reload, in  1.858 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2099 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.2 MB.
-System memory in use after: 95.2 MB.
+Unloading 2100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.4 MB.
+System memory in use after: 95.4 MB.
 
-Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2534.
-Total: 3.943867 ms (FindLiveObjects: 0.653156 ms CreateObjectMapping: 0.114400 ms MarkObjects: 2.965111 ms  DeleteObjects: 0.203378 ms)
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2535.
+Total: 3.568889 ms (FindLiveObjects: 0.401378 ms CreateObjectMapping: 0.122711 ms MarkObjects: 2.750978 ms  DeleteObjects: 0.286489 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -81,92 +81,161 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/BattleSystem.cs
-  artifactKey: Guid(6b7aeff018cd1ff4388844905f08daa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/BattleSystem.cs using Guid(6b7aeff018cd1ff4388844905f08daa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31b511e3aff691b31b0147c51089abbd') in 0.048647 seconds 
-  Import took 0.053304 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005244 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.724 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2081 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.9 MB.
-System memory in use after: 93.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2538.
-Total: 3.642223 ms (FindLiveObjects: 0.423378 ms CreateObjectMapping: 0.115867 ms MarkObjects: 2.919645 ms  DeleteObjects: 0.176978 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 162.443225 seconds.
-  path: Assets/Scripts/BattleSystem.cs
-  artifactKey: Guid(6b7aeff018cd1ff4388844905f08daa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/BattleSystem.cs using Guid(6b7aeff018cd1ff4388844905f08daa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c7cf6562ae9798b476b0e80ea990281') in 0.006568 seconds 
-  Import took 0.011009 seconds .
+  path: Assets/Prefabs/Abilities/AlchemistSkill02.prefab
+  artifactKey: Guid(d32945df88f862a41b87fb327f90691c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/AlchemistSkill02.prefab using Guid(d32945df88f862a41b87fb327f90691c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afd66d2d70d8889b69255eb8446b0c7d') in 0.081486 seconds 
+  Import took 0.085847 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.671570 seconds.
-  path: Assets/Scripts/UnitScript.cs
-  artifactKey: Guid(89478e7e3b0afe545a58f1f046fc66d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UnitScript.cs using Guid(89478e7e3b0afe545a58f1f046fc66d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00fabf3713e25f6d7ddf0df9e3b56886') in 0.003741 seconds 
-  Import took 0.008761 seconds .
+  Time since last request: 0.000305 seconds.
+  path: Assets/Prefabs/Abilities/MonkSkill04.prefab
+  artifactKey: Guid(ec143ba651a7f314b912e197ccd2eebc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/MonkSkill04.prefab using Guid(ec143ba651a7f314b912e197ccd2eebc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f532101594f184178cdab7ba1b939a6a') in 0.005754 seconds 
+  Import took 0.009820 seconds .
 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006054 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.753 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2081 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.0 MB.
-System memory in use after: 93.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2542.
-Total: 57.784718 ms (FindLiveObjects: 0.747022 ms CreateObjectMapping: 0.130533 ms MarkObjects: 54.791740 ms  DeleteObjects: 2.100756 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 4078.991890 seconds.
-  path: Assets/Scripts/AbilityScript.cs
-  artifactKey: Guid(ce63d5bcd47a6a64b91dffa54eb56cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/AbilityScript.cs using Guid(ce63d5bcd47a6a64b91dffa54eb56cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8e8b3663af3decb12afe5f7cbc35232') in 0.041276 seconds 
-  Import took 0.049165 seconds .
+  Time since last request: 0.000467 seconds.
+  path: Assets/Prefabs/Abilities/HuntressSkill02.prefab
+  artifactKey: Guid(9ce3ada4a1f5d8447818f85c49814984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/HuntressSkill02.prefab using Guid(9ce3ada4a1f5d8447818f85c49814984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d8d82669526e7d9b9f79a75a3d42437') in 0.005688 seconds 
+  Import took 0.009681 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000501 seconds.
+  path: Assets/Prefabs/Abilities/OgreSkill01.prefab
+  artifactKey: Guid(f904b84ca6867d341b253a8791cda489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/OgreSkill01.prefab using Guid(f904b84ca6867d341b253a8791cda489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '534e547f079a4246114226a005f90f0f') in 0.005871 seconds 
+  Import took 0.010297 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Prefabs/Abilities/AlchemistSkill04.prefab
+  artifactKey: Guid(b1f4278f461b49c428b429496203a4bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/AlchemistSkill04.prefab using Guid(b1f4278f461b49c428b429496203a4bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd57ac8bdfdf9daf2dae9ee591223410a') in 0.005022 seconds 
+  Import took 0.008779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/Prefabs/Abilities/FlagellantSkill03.prefab
+  artifactKey: Guid(f3e59801d127ecb4c8626be61cdf61f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/FlagellantSkill03.prefab using Guid(f3e59801d127ecb4c8626be61cdf61f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3df8e5b9b555a897349ce5de21623bbd') in 0.006133 seconds 
+  Import took 0.010012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000403 seconds.
+  path: Assets/Prefabs/Abilities/MonkSkill01.prefab
+  artifactKey: Guid(d7ed2a9bafdbd074dabd56c10faeef4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/MonkSkill01.prefab using Guid(d7ed2a9bafdbd074dabd56c10faeef4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8064c14a163f96a6c4658649f8dddca4') in 0.005651 seconds 
+  Import took 0.009588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Prefabs/Abilities/OgreSkill04.prefab
+  artifactKey: Guid(ffcb968dfe746944cada31c7306f0e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/OgreSkill04.prefab using Guid(ffcb968dfe746944cada31c7306f0e57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38063ae9eed107188a7a875da86abff1') in 0.005799 seconds 
+  Import took 0.010014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/Prefabs/Abilities/FlagellantSkill02.prefab
+  artifactKey: Guid(fd22f8fbf2cf10247871005448fdb798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/FlagellantSkill02.prefab using Guid(fd22f8fbf2cf10247871005448fdb798) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe69928c1a82bfab713b6751a4942d99') in 0.005751 seconds 
+  Import took 0.010361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Prefabs/Abilities/OgreSkill03.prefab
+  artifactKey: Guid(34c8a30098cd3114f8d81fa9bf7d263c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/OgreSkill03.prefab using Guid(34c8a30098cd3114f8d81fa9bf7d263c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d9636eca39ad0c60b6e9b12ade4a0fa') in 0.005950 seconds 
+  Import took 0.010040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Prefabs/Abilities/AlchemistSkill03.prefab
+  artifactKey: Guid(27c956778aa7f304aa8490fef6967db4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/AlchemistSkill03.prefab using Guid(27c956778aa7f304aa8490fef6967db4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e43a68217e2a2e436960787aa9095b58') in 0.005175 seconds 
+  Import took 0.009161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Prefabs/Abilities/MonkSkill02.prefab
+  artifactKey: Guid(9a3dadc40875c024a8a5f54c110e6277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/MonkSkill02.prefab using Guid(9a3dadc40875c024a8a5f54c110e6277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2feabec1b331c62ba0bd93dbaab71c01') in 0.005232 seconds 
+  Import took 0.009261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Prefabs/Abilities/OgreSkill02.prefab
+  artifactKey: Guid(4d8b8f550c54db342acee1d2cce5dc86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/OgreSkill02.prefab using Guid(4d8b8f550c54db342acee1d2cce5dc86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a9539a7d8a90dc559175c4389f42213') in 0.007370 seconds 
+  Import took 0.011236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/Prefabs/Abilities/AlchemistSkill01.prefab
+  artifactKey: Guid(6376b50fd7e41af42a046a058acead47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/AlchemistSkill01.prefab using Guid(6376b50fd7e41af42a046a058acead47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '322e0f0811a9b32012abbe86189c2e42') in 0.005391 seconds 
+  Import took 0.009458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/Prefabs/Abilities/FlagellantSkill01.prefab
+  artifactKey: Guid(87239b0dc94579949ab89fd679f4eabc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/FlagellantSkill01.prefab using Guid(87239b0dc94579949ab89fd679f4eabc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c8d056bfbd98a23914d917a47a37e6') in 0.006818 seconds 
+  Import took 0.011889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Prefabs/Abilities/MonkSkill03.prefab
+  artifactKey: Guid(321476b516b76354eb2d20edbe114b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/MonkSkill03.prefab using Guid(321476b516b76354eb2d20edbe114b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbf0a392e2756aa12aa08c08a4cd18af') in 0.008802 seconds 
+  Import took 0.014106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Prefabs/Abilities/FlagellantSkill04.prefab
+  artifactKey: Guid(56c05137f509d1e4c9a23b0ba4724765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/FlagellantSkill04.prefab using Guid(56c05137f509d1e4c9a23b0ba4724765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fe4742f9a130420506318320152c252') in 0.006454 seconds 
+  Import took 0.010564 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Prefabs/Abilities/HuntressSkill03.prefab
+  artifactKey: Guid(062e344bf816885488b067677d95f7a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/HuntressSkill03.prefab using Guid(062e344bf816885488b067677d95f7a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2f1d53bc626fd5c9de7296937389165') in 0.006008 seconds 
+  Import took 0.010855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000401 seconds.
+  path: Assets/Prefabs/Abilities/HuntressSkill01.prefab
+  artifactKey: Guid(96f3428ef8096dc44b0d6e4578187fc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/HuntressSkill01.prefab using Guid(96f3428ef8096dc44b0d6e4578187fc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81fb608c5cef5e53c28399d30afb705c') in 0.006216 seconds 
+  Import took 0.010424 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/Prefabs/Abilities/HuntressSkill04.prefab
+  artifactKey: Guid(e463c26514981964491fe59a12a546cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Abilities/HuntressSkill04.prefab using Guid(e463c26514981964491fe59a12a546cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '504a6a6b1d48105325f55c410a46182e') in 0.006297 seconds 
+  Import took 0.010704 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

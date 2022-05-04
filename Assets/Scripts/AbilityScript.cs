@@ -14,10 +14,4 @@ public class AbilityScript : MonoBehaviour
     public int speed; // Zdolnoœci z wiêksz¹ szybkoœci¹ s¹ aktywowane przed umiejêtnoœciami z ni¿sz¹ szybkoœci¹
     public string banes; //Efekty nak³adane na wroga
     public string boons; //Efekty nak³adane na rzucaj¹cego
-
-    public float AIValue_Skill; //Wartoœæ ruchu, gdy druga postaæ u¿yje jednej z czterech akcji lub u¿yje przechwycenia.
-    public float AIValue_Kill; //Wartoœæ ruchu, gdy ten ruch wyeliminuje drug¹ postaæ
-    public float AIValue_Rest; //Wartoœæ ruchu, gdy druga postaæ u¿yje akcji odpoczynku.
-    public float AIValue_Switch; // Wartoœæ ruchu, gdy druga postaæ u¿yje zmiany postaci
-    public float AIValue_Intercept; //Wartoœæ ruchu, gdy druga postaæ u¿yje przechwycenia
 }

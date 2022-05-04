@@ -14,6 +14,8 @@ public class BattleSystem : MonoBehaviour
 
 	public BattleState state;
 
+    int numer_ruchu = 0;
+
 	public GameObject playerPrefab ;
 	public GameObject playerPrefabSpare1 ;
 	public GameObject playerPrefabSpare2 ;
@@ -65,17 +67,26 @@ public class BattleSystem : MonoBehaviour
     public float AI_ManaMultiplier = 7.2f;
     public bool AI_ChooseMax = false;
     public bool AI_ChooseMin = false;
-    public float p_c = 80; //Zalecany przedzia³ to 70% do 90% - jest to dyskryminator krzy¿owania
+    public float p_c = 60; //Zalecany przedzia³ to 70% do 90% - jest to dyskryminator krzy¿owania
     public float p_m = 35; //Zalecany przedzia³ to 20% do 50% - jest to dyskryminator mutowania
-    public int AI_pop = 3;
-    public int AI_n = 2; // Zalecana wartoœæ nie wiêksza ni¿ 9, bo mo¿e wysadziæ komputer - to i tak ju¿ bêdzie wymagaæ pewnie z trzy gigabajty, 8 bêdzie zajmowaæ ok. 400MB, 7 oko³o 50MB, 6 ok. 6MB
-    public int AI_gen_max = 64;
+    public int AI_pop = 13;
+    public int AI_n = 3; // Zalecana wartoœæ nie wiêksza ni¿ 9, bo mo¿e wysadziæ komputer - to i tak ju¿ bêdzie wymagaæ pewnie z trzy gigabajty, 8 bêdzie zajmowaæ ok. 400MB, 7 oko³o 50MB, 6 ok. 6MB
+    public int AI_gen_max = 125;
+
+    
 
     void Start()
 	{
 		attackActionContainer.SetActive(false);
         state = BattleState.START ;
-		StartCoroutine(SetupBattle()) ;
+        Debug.Log("AI_KillBonus " + AI_KillBonus);
+        Debug.Log("AI_ManaDivider " + AI_ManaMultiplier);
+        Debug.Log("p_c " + p_c);
+        Debug.Log("p_m " + p_m);
+        Debug.Log("AI_pop " + AI_pop);
+        Debug.Log("AI_n " + AI_n);
+        Debug.Log("AI_gen_max " + AI_gen_max);
+        StartCoroutine(SetupBattle()) ;
     }
 	IEnumerator SetupBattle(){
 		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation) ;
@@ -198,6 +209,12 @@ public class BattleSystem : MonoBehaviour
 		{
 			enemyUnit.rests = true;
             enemySpeedAmt = -10;
+        }
+        else if (enemyActionNumber == 7)
+        {
+            enemyActionNumber = 8;
+            enemyUnit.switches = true;
+            enemySpeedAmt = 20;
         }
 		else if (enemyActionNumber == 5 || enemyActionNumber == 8)
 		{
@@ -431,6 +448,97 @@ public class BattleSystem : MonoBehaviour
                 playerHUD.SetConditions(playerUnit);
                 enemyHUD.SetConditions(enemyUnit);
             }
+        }
+        else if (playerActionNumber <= 3 && enemyActionNumber == 4)
+        {
+            yield return new WaitForSeconds(1.0f);
+
+            //Najpierw gracz wywo³uje wszystko zwi¹zane z atakiem
+            enemyUnit.TakeDamage(playerUnit.ability[playerActionNumber].damage, playerUnit.ability[playerActionNumber].times, playerUnit.ability[playerActionNumber].type, playerUnit.impair, playerUnit.strength, playerUnit.weak, playerUnit.power);
+            playerUnit.impair = false;
+            playerUnit.strength = false;
+            playerUnit.weak = false;
+            playerUnit.power = false;
+            playerUnit.InflictFeatures(playerUnit.ability[playerActionNumber].boons);
+            enemyHUD.SetHP(enemyUnit.curHP);
+            playerHUD.SetMP(enemyUnit.curMana);
+            playerHUD.SetConditions(playerUnit);
+            if (enemyUnit.CheckDead())
+            {
+                //Zmuœ wroga, ¿eby umieœci³ now¹ postaæ. Jeœli nie mo¿e, gracz wygrywa
+                if (enemyAlive > 1)
+                {
+                    enemyAlive--;
+                    if (enemyUnitSpare1.CheckDead()) SwitchCharacter(true, false); else SwitchCharacter(true, true);
+
+                }
+                else
+                {
+                    //Gracz wygrywa!
+                }
+            }
+            else
+            {
+                enemyHUD.SetConditions(enemyUnit);
+                yield return new WaitForSeconds(1.0f);
+                enemyUnit.curHP = Math.Min(enemyUnit.curHP + enemyUnit.restHeal, enemyUnit.maxHP);
+                enemyUnit.curMana = Math.Min(enemyUnit.curMana + enemyUnit.restMana, enemyUnit.maxMana);
+                enemyHUD.SetHP(enemyUnit.curHP);
+                enemyHUD.SetMP(enemyUnit.curMana);
+                enemyUnit.interrupted = false;
+                yield return new WaitForSeconds(1.0f);
+            }
+            playerUnit.interrupted = false;
+        }
+        else if (playerActionNumber <= 3 && (enemyActionNumber == 5 || enemyActionNumber == 8))
+        {
+            yield return new WaitForSeconds(1.0f);
+
+            if (enemyActionNumber == 5) SwitchCharacter(true, true); else SwitchCharacter(true, false);
+            //Gracz wykonuje nieudany atak - pud³uje
+
+            playerUnit.impair = false;
+            playerUnit.strength = false;
+            playerUnit.weak = false;
+            playerUnit.power = false;
+            playerUnit.InflictFeatures(playerUnit.ability[playerActionNumber].boons);
+            playerHUD.SetMP(playerUnit.curMana);
+            playerHUD.SetConditions(playerUnit);
+        }
+        else if (playerActionNumber <= 3 && enemyActionNumber == 6)
+        {
+            yield return new WaitForSeconds(1.0f);
+
+            //Najpierw gracz wywo³uje wszystko zwi¹zane z atakiem
+            enemyUnit.TakeDamage(playerUnit.ability[playerActionNumber].damage, playerUnit.ability[playerActionNumber].times, playerUnit.ability[playerActionNumber].type, playerUnit.impair, playerUnit.strength, playerUnit.weak, playerUnit.power);
+            playerUnit.impair = false;
+            playerUnit.strength = false;
+            playerUnit.weak = false;
+            playerUnit.power = false;
+            playerUnit.InflictFeatures(playerUnit.ability[playerActionNumber].boons);
+            enemyHUD.SetHP(enemyUnit.curHP);
+            playerHUD.SetMP(enemyUnit.curMana);
+            playerHUD.SetConditions(playerUnit);
+            if (enemyUnit.CheckDead())
+            {
+                //Zmuœ wroga, ¿eby umieœci³ now¹ postaæ. Jeœli nie mo¿e, gracz wygrywa
+                if (enemyAlive > 1)
+                {
+                    enemyAlive--;
+                    if (enemyUnitSpare1.CheckDead()) SwitchCharacter(true, false); else SwitchCharacter(true, true);
+
+                }
+                else
+                {
+                    //Gracz wygrywa!
+                }
+            }
+            else
+            {
+                enemyHUD.SetConditions(enemyUnit);
+                yield return new WaitForSeconds(1.0f);
+            }
+            playerUnit.interrupted = false;
         }
         else if (playerActionNumber == 4)
         {
@@ -1307,8 +1415,8 @@ public class BattleSystem : MonoBehaviour
                 AI_MPLoses[AI_iterator] = playerUnit.ability[AI_iterator].cost;
 
                 AI_Speeds[AI_iterator] = playerUnit.ability[AI_iterator].speed;
-                if (L1STAT[8] == '1') AI_Speeds[AI_iterator] += 2;
-                if (L1STAT[9] == '1') AI_Speeds[AI_iterator] -= 2;
+                if (L1STAT[8] == '1' && actionAI < 4) AI_Speeds[AI_iterator] += 2;
+                if (L1STAT[9] == '1' && actionAI < 4) AI_Speeds[AI_iterator] -= 2;
             }
         }
         else if (activeL == 1)
@@ -1318,8 +1426,8 @@ public class BattleSystem : MonoBehaviour
                 AI_MPLoses[AI_iterator] = playerUnitSpare1.ability[AI_iterator].cost;
 
                 AI_Speeds[AI_iterator] = playerUnitSpare1.ability[AI_iterator].speed;
-                if (L2STAT[8] == '1') AI_Speeds[AI_iterator] += 2;
-                if (L2STAT[9] == '1') AI_Speeds[AI_iterator] -= 2;
+                if (L2STAT[8] == '1' && actionAI < 4) AI_Speeds[AI_iterator] += 2;
+                if (L2STAT[9] == '1' && actionAI < 4) AI_Speeds[AI_iterator] -= 2;
             }
         }
         else if (activeL == 2)
@@ -1329,8 +1437,8 @@ public class BattleSystem : MonoBehaviour
                 AI_MPLoses[AI_iterator] = playerUnitSpare2.ability[AI_iterator].cost;
 
                 AI_Speeds[AI_iterator] = playerUnitSpare2.ability[AI_iterator].speed;
-                if (L3STAT[8] == '1') AI_Speeds[AI_iterator] += 2;
-                if (L3STAT[9] == '1') AI_Speeds[AI_iterator] -= 2;
+                if (L3STAT[8] == '1' && actionAI < 4) AI_Speeds[AI_iterator] += 2;
+                if (L3STAT[9] == '1' && actionAI < 4) AI_Speeds[AI_iterator] -= 2;
             }
         }
         if (activeR == 0)
@@ -1340,8 +1448,8 @@ public class BattleSystem : MonoBehaviour
                 if (actionAI < 4) AI_MPLoses[4] = enemyUnit.ability[actionAI].cost; else AI_MPLoses[4] = 0;
 
                 if (actionAI < 4) AI_Speeds[4] = playerUnit.ability[actionAI].speed; else AI_Speeds[4] = 0;
-                if (R1STAT[8] == '1') AI_Speeds[actionAI] += 2;
-                if (R1STAT[9] == '1') AI_Speeds[actionAI] -= 2;
+                if (R1STAT[8] == '1' && actionAI < 4) AI_Speeds[actionAI] += 2;
+                if (R1STAT[9] == '1' && actionAI < 4) AI_Speeds[actionAI] -= 2;
             }
         }
         else if (activeR == 1)
@@ -1351,8 +1459,8 @@ public class BattleSystem : MonoBehaviour
                 if (actionAI < 4) AI_MPLoses[4] = enemyUnitSpare1.ability[actionAI].cost; else AI_MPLoses[4] = 0;
 
                 if (actionAI < 4) AI_Speeds[4] = playerUnitSpare1.ability[actionAI].speed; else AI_Speeds[4] = 0;
-                if (R2STAT[8] == '1') AI_Speeds[actionAI] += 2;
-                if (R2STAT[9] == '1') AI_Speeds[actionAI] -= 2;
+                if (R2STAT[8] == '1' && actionAI < 4) AI_Speeds[actionAI] += 2;
+                if (R2STAT[9] == '1' && actionAI < 4) AI_Speeds[actionAI] -= 2;
             }
         }
         else if (activeR == 2)
@@ -1362,8 +1470,8 @@ public class BattleSystem : MonoBehaviour
                 if (actionAI < 4) AI_MPLoses[4] = enemyUnitSpare2.ability[actionAI].cost; else AI_MPLoses[4] = 0;
 
                 if (actionAI < 4) AI_Speeds[4] = playerUnitSpare2.ability[actionAI].speed; else AI_Speeds[4] = 0;
-                if (R3STAT[8] == '1') AI_Speeds[actionAI] += 2;
-                if (R3STAT[9] == '1') AI_Speeds[actionAI] -= 2;
+                if (R3STAT[8] == '1' && actionAI < 4) AI_Speeds[actionAI] += 2;
+                if (R3STAT[9] == '1' && actionAI < 4) AI_Speeds[actionAI] -= 2;
             }
         }
 
@@ -2341,7 +2449,7 @@ public class BattleSystem : MonoBehaviour
             float amt = 0;
             for (int AI_iterator = 0; AI_iterator < 8; AI_iterator++)
             {
-                if (AI_points[AI_iterator] > -65536)
+                if (AI_points[AI_iterator] > bardzo_mala_wartosc)
                 {
                     kontrolka += 1;
                     amt = AI_points[AI_iterator];
@@ -2400,11 +2508,11 @@ public class BattleSystem : MonoBehaviour
             {
                 if (AI_EvaluateSingle(Selection_i1, 0, 0, playerUnit.curHP, playerUnit.curMana, AI_prepareSTAT(playerUnit), playerUnitSpare1.curHP, playerUnitSpare1.curMana, AI_prepareSTAT(playerUnitSpare1), playerUnitSpare2.curHP, playerUnitSpare2.curMana, AI_prepareSTAT(playerUnitSpare2), enemyUnit.curHP, enemyUnit.curMana, AI_prepareSTAT(enemyUnit), enemyUnitSpare1.curHP, enemyUnitSpare1.curMana, AI_prepareSTAT(enemyUnitSpare1), enemyUnitSpare2.curHP, enemyUnitSpare2.curMana, AI_prepareSTAT(enemyUnitSpare2), AI_n) <= AI_EvaluateSingle(Selection_i2, 0, 0, playerUnit.curHP, playerUnit.curMana, AI_prepareSTAT(playerUnit), playerUnitSpare1.curHP, playerUnitSpare1.curMana, AI_prepareSTAT(playerUnitSpare1), playerUnitSpare2.curHP, playerUnitSpare2.curMana, AI_prepareSTAT(playerUnitSpare2), enemyUnit.curHP, enemyUnit.curMana, AI_prepareSTAT(enemyUnit), enemyUnitSpare1.curHP, enemyUnitSpare1.curMana, AI_prepareSTAT(enemyUnitSpare1), enemyUnitSpare2.curHP, enemyUnitSpare2.curMana, AI_prepareSTAT(enemyUnitSpare2), AI_n))
                 {
-                    AI_X[Selection_i] = Selection_i1;
+                    AI_X[Selection_i] = Selection_i2;
                 }
                 else
                 {
-                    AI_X[Selection_i] = Selection_i2;
+                    AI_X[Selection_i] = Selection_i1;
                 }
             }
             Selection_i += 1;
@@ -2508,6 +2616,7 @@ public class BattleSystem : MonoBehaviour
     //Jest to funkcja, która dokona ca³kowitego obliczenia ruchu poprzez algorytm genetyczny. Tutaj bêdzie inicjowane i przetwarzane wartoœci
     int AI_Run()
     {
+        var startTime = DateTime.Now;
         int[][] AI_P = new int[AI_pop][] ;
         int[][] AI_Pn = new int[AI_pop][];
         for (int AI_i = 0; AI_i < AI_pop; AI_i++)
@@ -2530,7 +2639,8 @@ public class BattleSystem : MonoBehaviour
             AI_P = AI_Pn;
             AI_gen += 1;
         }
-        Debug.Log("AI_gen: " + AI_gen);
+        numer_ruchu += 1;
+        Debug.Log("Nr Ruchu: " + numer_ruchu + " | AI_gen: " + AI_gen + " | Best: " + AI_P[best][0] + " | Czas: " + (DateTime.Now - startTime).Seconds + " " + (DateTime.Now - startTime).Milliseconds + " | Punkty: " + AI_EvaluateSingle(AI_P[best], 0, 0, playerUnit.curHP, playerUnit.curMana, AI_prepareSTAT(playerUnit), playerUnitSpare1.curHP, playerUnitSpare1.curMana, AI_prepareSTAT(playerUnitSpare1), playerUnitSpare2.curHP, playerUnitSpare2.curMana, AI_prepareSTAT(playerUnitSpare2), enemyUnit.curHP, enemyUnit.curMana, AI_prepareSTAT(enemyUnit), enemyUnitSpare1.curHP, enemyUnitSpare1.curMana, AI_prepareSTAT(enemyUnitSpare1), enemyUnitSpare2.curHP, enemyUnitSpare2.curMana, AI_prepareSTAT(enemyUnitSpare2), AI_n));
         return AI_P[best][0];
     }
 }
